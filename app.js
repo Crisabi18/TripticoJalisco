@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function() { var modal = document.getElementById('customAlert'); var closeButton = document.querySelector('.close-button'); 
+// Mostrar la caja de diálogo personalizada al cargar la página
+modal.style.display = 'block';
+// Cerrar la caja de diálogo personalizada al hacer clic en el botón de cierre 
+closeButton.onclick = function() { modal.style.display = 'none'; } 
+// Cerrar la caja de diálogo personalizada al hacer clic fuera de la misma 
+window.onclick = function(event) { if (event.target === modal) { modal.style.display = 'none';
+} }
+
 document.addEventListener('DOMContentLoaded', function () {
     var panel1 = document.getElementById('panel1');
     var panel3 = document.getElementById('panel3');
@@ -38,3 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     alert("Para poder checar las demas caras del Tríptico deberas dar clic primero en la cara del lado derecho y por ultimo en la cara del lado izquierdo");
+// });  
+})
