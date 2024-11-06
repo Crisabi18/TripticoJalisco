@@ -1,10 +1,11 @@
+
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: auto;
+    margin-top: 80px;
     background: purple;
 }
 
@@ -89,32 +90,41 @@ body {
 }
 
 @media (max-width: 500px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
     body {
         font-family: 'Arial', sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
-        width: 350%;
-        margin-top: 800px;
+        /* margin-top: 100px; */
+        /* width: 400% ; */
+        margin: 0;
+        padding: 0;
+        transform: scale(0.30);
+        transform-origin: center;
+        /* margin-top: 100px; */
         background: purple;
     }
-    /* .triptych{
+
+    .triptych{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        height: auto;
 
     }
 
-    .triptic {
+    /* .triptic {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
 
     } */
-        
+
     #panel1 {
         /* background-color: ;   */
         transform-origin: right;
