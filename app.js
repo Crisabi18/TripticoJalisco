@@ -1,11 +1,9 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
     var panel1 = document.getElementById('panel1');
     var panel3 = document.getElementById('panel3');
     var panel2 = document.querySelector('#panel2');
 
-    var clickState = 0;  
+    var clickState = 0;
 
     panel1.onclick = function (event) {
         if (this.classList.contains('flipped')) {
@@ -18,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var back1 = panel1.querySelector('.back');
     back1.onclick = function (event) {
         panel1.classList.remove('flipped');
+        event.stopPropagation();
     }
 
     panel3.onclick = function (event) {
@@ -37,7 +36,5 @@ document.addEventListener('DOMContentLoaded', function () {
             panel3.classList.remove('flipped');
             clickState = 0;
         }
-
     }
-
 });

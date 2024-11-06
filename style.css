@@ -5,15 +5,22 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: rgb(195,34,170);
-    background: linear-gradient(0deg, rgba(195,34,170,1) 0%, rgba(78,15,101,1) 100%);
+    background: purple;
 }
 
 .triptych {
     display: flex;
     justify-content: center;
     align-items: center;
-    perspective: 1500px;
+
+    /* perspective: 1500px; */
+}
+.triptic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* perspective: 1500px; */
 }
 
 .panel {
@@ -81,3 +88,60 @@ body {
     z-index: 3;
 }
 
+@media (max-width: 500px) {
+    body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 350%;
+        margin-top: 800px;
+        background: purple;
+    }
+    /* .triptych{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .triptic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    } */
+        
+    #panel1 {
+        /* background-color: ;   */
+        transform-origin: right;
+    }
+    
+    #panel2 {
+        /* background-color: ;   */
+        z-index: 0;
+    }
+    
+    #panel3 {
+        /* background-color: ;   */
+        transform-origin: left;
+    }
+    
+    #panel4 {
+        /* background-color: ;  */
+        transform-origin: center;
+    }
+    
+    #panel1.flipped {
+        transform: rotateY(180deg);
+        z-index: 4;
+    }
+    
+    #panel3.flipped {
+        transform: rotateY(-180deg);
+        z-index: 3;
+    }
+}
